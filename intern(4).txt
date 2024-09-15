@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #a2c2e9, #d0e4f0); /* Pastel blue gradient */
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 15px 15px;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 1rem 0 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #d0e4f0; /* Light pastel blue for hover effect */
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        section.dashboard {
+            display: flex;
+            justify-content: space-between;
+            padding: 3rem 1rem;
+            background: url('schooldoodle.png') no-repeat center center;
+            background-size: cover; /* Ensure background image covers the section */
+            position: relative;
+            background-attachment: fixed; /* Optional: Keeps the background fixed on scroll */
+        }
+
+        .features {
+            width: 70%;
+            position: relative; /* To place feature boxes on top of the background image */
+        }
+
+        .feature-box {
+            background: linear-gradient(135deg, #cfe3fc, #d0e4f0), 
+                        url('pattern.png'); /* Add your pattern image here */
+            background-blend-mode: multiply; /* Adjust blending mode to combine gradient and pattern */
+            padding: 2rem;
+            margin: 1rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease;
+            width: 100%;
+            background-size: cover; /* Ensure pattern covers the box */
+        }
+
+        .feature-box:hover {
+            background: linear-gradient(135deg, #b0d0f0, #c0d4e0), 
+                        url('pattern.png'); /* Ensure pattern is maintained */
+            background-blend-mode: multiply;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .feature-box h3 {
+            color: #a2c2e9; /* Pastel blue */
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        .feature-box p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .image-sidebar {
+            width: 25%;
+            text-align: center;
+            position: relative; /* To place images on top of the background image */
+            z-index: 1; /* Ensure images appear above the background image */
+        }
+
+        .image-sidebar img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #a2c2e9; /* Pastel blue */
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            section.dashboard {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .features {
+                width: 100%;
+            }
+
+            .image-sidebar {
+                width: 100%;
+                margin-top: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .roles button {
+                width: 100%;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>COLLEGE TIME TABLE MANAGEMENT SYSTEM</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="dashboard">
+        <div class="features">
+            <div class="feature-box">
+                <h3>Schedule Creation</h3>
+                <p>Creating a schedule can help you stay organized and manage your time effectively.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Conflict Resolution</h3>
+                <p>Conflict resolution hinges on clear communication and understanding different viewpoints to find mutually acceptable solutions.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Announcements</h3>
+                <p>View important announcements regarding schedules.</p>
+            </div>
+            <div class="feature-box">
+                <h3>User Calendar Integration</h3>
+                <p>Allow faculty and students to sync their schedules with personal calendar applications.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Attendance Tracking</h3>
+                <p>Track attendance based on the class schedule.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Dashboard Customization</h3>
+                <p>Customize your dashboard to quickly access your most frequently used features.</p>
+            </div>
+        </div>
+        <div class="image-sidebar">
+            <img src="Cinnamaroll.png" alt="Cinnamaroll">
+            <img src="percent.png" alt="Percent">
+            <img src="timetable.png" alt="Timetable">
+        </div>
+    </section>
+    
+    <footer>
+        &copy; 2024 TIME TABLE MANAGEMENT SYSTEM. All rights reserved.
+    </footer>
+</body>
+</html>
